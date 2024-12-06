@@ -1,144 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="B9A2-Hero-Travel/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header class="all-items">
-        <section class="plan-logo">
-           <img src="B9A2-Hero-Travel/Images/Group 40071 (2).png" alt="">
-        </section>
-        <section class="hero-travels">
-            <h1>Hero <span class="praimary-colors">Travel</span></h1>
-        </section>
-        <section class="manu-bar" style="height: 50px; width: 500px;">
-                 <a href="#"><span class="praimary-colors">Home</span></a>
-                 <a href="">packages</a>
-                 <a href="">Testimonial</a>
-                 <a href="">Blog</a>
-                 <a href="">Contact</a>
-        </section>
-    </header>
-    <section class="picture-containe" style="background-image: url(B9A2-Hero-Travel/Images/Group\ 13\ \(1\)\ \(1\).png);" >
-                <section class="text-details">
-                           <h2>Explore Your Travel</h2>
-                           <p>Dolor sit amet consectetur. Nullam suspendisse vitae ultricies dolor adipiscing. In et odio enim ac quis sapien urna eu phasellus.</p>
-                </section>
-                <section class="serch-bar">
-                         <input type="text" placeholder="Where go">
-                         <i id="angle-dwon" class="fa-solid fa-angle-down"></i>   
-                         <input type="text" placeholder="when"> 
-                         <i id="angle" class="fa-solid fa-angle-down"></i>  
-                         <input type="text" placeholder="Select Type">
-                         <i id="screch" class="fa-solid fa-magnifying-glass"></i>   
-                         <input id="find" type="text" placeholder="Find Now">   
-                </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assainment.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+          <!-- Logo Section -->
+          <section class="flex items-center gap-3">
+            <img
+              src="B9A2-Hero-Travel/Images/Group 40071 (2).png"
+              alt="Logo"
+              class="h-10"
+            />
+            <h1 class="text-2xl font-extrabold text-gray-800">
+              Hero <span class="text-orange-500">Travel</span>
+            </h1>
+          </section>
+      
+          <!-- Mobile Menu Toggle (Checkbox) -->
+          <input type="checkbox" id="menuToggle" class="hidden" />
+      
+          <!-- Menu Button -->
+          <label
+            for="menuToggle"
+            class="block md:hidden text-gray-600 text-2xl cursor-pointer"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </label>
+      
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden md:flex space-x-8 text-gray-600 font-semibold"
+          >
+            <a href="#" class="hover:text-orange-500">Home</a>
+            <a href="#" class="hover:text-orange-500">Packages</a>
+            <a href="#" class="hover:text-orange-500">Testimonial</a>
+            <a href="#" class="hover:text-orange-500">Blog</a>
+            <a href="#" class="hover:text-orange-500">Contact</a>
+          </nav>
+        </div>
+      
+        <!-- Mobile Navigation -->
+        <nav
+          class="md:hidden flex-col space-y-4 p-4 bg-gray-100 text-gray-600 font-semibold transition-transform transform translate-y-full"
+          id="mobileNav"
+        >
+          <a href="#" class="hover:text-orange-500">Home</a>
+          <a href="#" class="hover:text-orange-500">Packages</a>
+          <a href="#" class="hover:text-orange-500">Testimonial</a>
+          <a href="#" class="hover:text-orange-500">Blog</a>
+          <a href="#" class="hover:text-orange-500">Contact</a>
+        </nav>
+      </header>
+      
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-[80vh] flex items-center justify-center"
+      style="
+        background-image: url('./B9A2-Hero-Travel/Images/Group\ 13\ \(1\)\ \(1\).png');
+      "
+    >
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4"
+      >
+        <h2 class="text-5xl font-bold text-white mb-4">
+          Explore Your Next Journey
+        </h2>
+        <p class="text-lg text-gray-200 max-w-2xl mb-8">
+          Discover amazing destinations and create unforgettable memories with
+          our exclusive travel packages.
+        </p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-4xl bg-white rounded-lg shadow-lg p-6"
+        >
+          <input
+            type="text"
+            placeholder="Where to go?"
+            class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-orange-500"
+          />
+          <input
+            type="text"
+            placeholder="When?"
+            class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-orange-500"
+          />
+          <input
+            type="text"
+            placeholder="Select Type"
+            class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            class="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg p-3"
+          >
+            Find Now
+          </button>
+        </div>
+      </div>
     </section>
-    <section class="popular-turs" style="height: 400px; width: 570px; margin: 750px 0 0 115px;">
-       <h1>Our Popular Tours </h1><br>
-       <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
-       <li>Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at .</li>
-       <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam. </li>
-       <li>Accumsan eget et turpis praesent lorem egestas enim elit bibendum. Risus at in.</li>
-       <p>Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. Id bibendum nunc senectus semper tincidunt.</p>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <!-- Left Column: Text and Button -->
+          <div class="space-y-6">
+            <h1 class="text-4xl font-bold text-gray-800">
+              Explore the Mountains
+            </h1>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Discover breathtaking mountain views and adventures that will
+              leave you mesmerized. Perfect for hiking, photography, and
+              reconnecting with nature.
+            </p>
+            <button
+              class="bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-orange-600 transition duration-300"
+            >
+              Read More
+            </button>
+          </div>
+          <!-- Right Column: Image -->
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="B9A2-Hero-Travel/Images/Rectangle 4.png"
+              alt="Mountain View"
+              class="w-full h-96 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"
+            ></div>
+            <div
+              class="absolute bottom-4 left-4 text-white font-semibold text-xl"
+            >
+              Experience Serenity in the Mountains
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="mountain"><img src="B9A2-Hero-Travel/Images/Rectangle 4.png" alt=""></section>
-    <button class="reade">Reade More</button>
-    <section  class="distination" style="height: 143px; width: 643px;">
-       <h1>Choose Your Destination</h1>
-       <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
-    </section>
-    <section class="place-pic" style="position: absolute; margin: 300px 0px 0px 130px;">
-          <div class="Maldiv"><img src="B9A2-Hero-Travel/Images/Rectangle 5.png" alt=""><h1>Maldives</h1> </div>
-          <div class="indonasia"><img src="B9A2-Hero-Travel/Images/Rectangle 8.png" alt=""><h1>Indonesia</h1></div>
-          <div class="srilanka"><img src="B9A2-Hero-Travel/Images/Rectangle 6.png" alt=""><h1>Srilanka</h1></div>
-          <div class="amirica"><img src="B9A2-Hero-Travel/Images/Rectangle 7.png" alt=""><h1>North America </h1></div>
-          <div class="kasmir"><img src="B9A2-Hero-Travel/Images/Rectangle 9.png" alt=""><h1>Kashmir </h1></div>
-          <div class="banglades"><img src="B9A2-Hero-Travel/Images/Rectangle 11.png" alt=""><h1>Bangladesh</h1></div>
-          <div class="bandarban"><img src="B9A2-Hero-Travel/Images/Rectangle 10.png" alt=""><h1>Bandarban</h1></div>
-    </section>
-    <section class="choose">
-        <h1> Why Choose Us </h1>
-        <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
-    </section>
-    <div class="main-details">
-        <section class="Hotails" style="height:auto;width: auto;">
-            <i class="fa-solid fa-hotel fa-2xl" style="color: #ff5400;"></i>
-            <h1>Handpicked Hotels</h1>
-            <p>Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
-        </section>
-        <section class="service"style="height:auto ;width: auto;">
-            <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #ff5400;"></i>
-            <h1>World Class Service</h1>
-            <p>Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
-        </section>
+    <div class="image-grid">
+      <div class="image-row">
+        <div class="image image-06">
+          <div class="overlay">
+            <h1 class="place-name">Bandarban</h1>
+          </div>
+        </div>
+        <div class="image image-07">
+          <div class="overlay">
+            <h1 class="place-name">North America</h1>
+          </div>
+        </div>
+      </div>
+      <div class="image-row">
+        <div class="image image-01">
+          <div class="overlay">
+            <h1 class="place-name">Maldives</h1>
+          </div>
+        </div>
+        <div class="image image-02">
+          <div class="overlay">
+            <h1 class="place-name">Indonesia</h1>
+          </div>
+        </div>
+        <div class="image image-03">
+          <div class="overlay">
+            <h1 class="place-name">Srilanka</h1>
+          </div>
+        </div>
+      </div>
+      <div class="image-row">
+        <div class="image image-04">
+          <div class="overlay">
+            <h1 class="place-name">Kashmir</h1>
+          </div>
+        </div>
+        <div class="image image-05">
+          <div class="overlay">
+            <h1 class="place-name">Bangladesh</h1>
+          </div>
+        </div>
+      </div>
     </div>
-    <section class="Best-price" style="width: 557px;height:auto;margin: 50px auto 0px auto;">
-        <i class="fa-solid fa-percent fa-2xl" style="color: #ff5400;"></i>
-        <h1 style="margin: 20px  0px 0px 5px;">Best Price Guarantee</h1>
-        <p style="margin-top: 20px;">Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet.</p>
+
+    <section class="choose text-center py-12 px-6">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Us</h1>
+      <p class="text-lg text-gray-600 max-w-xl mx-auto">
+        Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio
+        sit massa. Sodales dictumst nec nibh pellentesque.
+      </p>
     </section>
-    <div class="Book-now" style="background-image: url(B9A2-Hero-Travel/Images/Group\ 39.png);">
-      <section class="box">
-        <i class="fa-solid fa-clock" style="color: #ff5400;"> <span>Day / 6 Night</span>  </i>
-        <i class="fa-solid fa-people-group" style="color: #ff5400;"><span>Max : 10</span></i>
-        <i class="fa-solid fa-location-dot" style="color: #ff5400;"><span>Malaysia</span></i>
-        <h1>Tour To Satorini</h1>
-        <p>Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing.</p>
-        <h2>Price: $1300-$1500 </h2>
-        <button>Book Now</button>
+
+    <div
+      class="main-details grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-12 px-6"
+    >
+      <section
+        class="Hotails flex flex-col items-center bg-white p-6 rounded-lg shadow-lg text-center"
+      >
+        <i class="fa-solid fa-hotel text-4xl text-orange-500 mb-4"></i>
+        <h1 class="text-2xl font-semibold text-gray-800 mb-4">
+          Handpicked Hotels
+        </h1>
+        <p class="text-gray-600">
+          Amet consectetur. Vulputate commodo felis molestie risus ornare nulla
+          amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant
+          adipiscing risus natoque aliquet.
+        </p>
       </section>
-      <button style="width: 210px;height: 52px; margin: 520px auto 0px 500px;position: absolute; background-color: rgb(255, 84, 0);color:white;border-radius: 8px;"> See All Packages</button>
-    </div>
-    <section class="perfect-place">
-     <div class="box-one">
-      <h1> A Simple Perfect Place <br>To Get Lost</h1>
-      <p> Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis.</p>
-      <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
-      <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
-      <button>See More</button>
-    </div>
-    <div class="box-tww">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Cn4G2lZ_g2I?si=lqDnyRrj9m9VqoJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    </section>
-    <section  class="last-input" style="height: 400px;width: auto;">
-        <div class="newlatter" style="width: 474px; height: 422px; border: 1px solid red;"> 
-          <h1>Newsletter</h1>
-          <p>Get your daily dose of travel news & tips. <br>Sign up today!</p>
-          <div class="input-box">
-              <input type="text" placeholder="Enter your name">
-                 <br>
-                <input type="text" placeholder="enter your email">
-           </div>
-          <button>Subscribe </button>
-        </div>
-        <div class="last-image">
-           <div class="save-up">
-            <P>Travel.com </P>
-            <h1>Save up to 70%</h1>
-           </div>
-        </div>
-    </section>
-    <footer>
-        <h1 > <img src="B9A2-Hero-Travel/Images/Group 40071 (2).png" alt=""> Hero Travel</h1>
-        <p>Lorem ipsum dolor sit amet consectetur. Nulla sit viverra morbi vitae blandit orci potenti vulputate. Leo erat maecenas vitae elementum ultricies nullam.</p>
-        <div style="width: 769px;height: 52px;">
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <br>
-            <br>
-            <hr>
-        </div>
-        <address> 2017, All Rights Reserved.</address>
-    </footer>
 
-</body>
+      <section
+        class="service flex flex-col items-center bg-white p-6 rounded-lg shadow-lg text-center"
+      >
+        <i
+          class="fa-solid fa-map-location-dot text-4xl text-orange-500 mb-4"
+        ></i>
+        <h1 class="text-2xl font-semibold text-gray-800 mb-4">
+          World Class Service
+        </h1>
+        <p class="text-gray-600">
+          Amet consectetur. Vulputate commodo felis molestie risus ornare nulla
+          amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant
+          adipiscing risus natoque aliquet.
+        </p>
+      </section>
+    </div>
 
+    <section
+      class="Best-price bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto my-12 text-center"
+    >
+      <i class="fa-solid fa-percent text-4xl text-orange-500 mb-4"></i>
+      <h1 class="text-2xl font-semibold text-gray-800 mb-4">
+        Best Price Guarantee
+      </h1>
+      <p class="text-gray-600">
+        Amet consectetur. Vulputate commodo felis molestie risus ornare nulla
+        amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant
+        adipiscing risus natoque aliquet.
+      </p>
+    </section>
+
+    <div
+      class="Book-now bg-cover bg-center relative p-8 md:flex md:flex-row-reverse md:items-center md:justify-between"
+      style="background-image: url('B9A2-Hero-Travel/Images/Group%2039.png')"
+    >
+      <!-- Text Content Section -->
+      <section
+        class="box bg-white bg-opacity-80 p-6 rounded-lg shadow-lg max-w-lg md:ml-8"
+      >
+        <div class="flex items-center mb-4">
+          <i class="fa-solid fa-clock text-orange-500 mr-2 text-lg"></i>
+          <span class="text-gray-800 font-medium">Day / 6 Night</span>
+        </div>
+        <div class="flex items-center mb-4">
+          <i class="fa-solid fa-people-group text-orange-500 mr-2 text-lg"></i>
+          <span class="text-gray-800 font-medium">Max : 10</span>
+        </div>
+        <div class="flex items-center mb-4">
+          <i class="fa-solid fa-location-dot text-orange-500 mr-2 text-lg"></i>
+          <span class="text-gray-800 font-medium">Malaysia</span>
+        </div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Tour To Santorini</h1>
+        <p class="text-gray-600 mb-4">
+          Amet consectetur. Vulputate commodo felis molestie risus ornare nulla
+          amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant
+          adipiscing.
+        </p>
+        <h2 class="text-xl font-semibold text-gray-800 mb-6">
+          Price: $1300-$1500
+        </h2>
+        <button
+          class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition"
+        >
+          Book Now
+        </button>
+      </section>
+    </div>
+    <!-- See All Packages Button -->
+    <div class="flex justify-center mt-8 md:mt-0 py-10">
+      <button
+        class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition"
+      >
+        See All Packages
+      </button>
+    </div>
+    <section class="perfect-place bg-gray-100 py-12 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+          <!-- Text Content -->
+          <div class="box-one md:w-1/2 space-y-6">
+            <h1 class="text-4xl font-bold text-gray-800 leading-snug">
+              A Simple Perfect Place <br />To Get Lost
+            </h1>
+            <p class="text-gray-600 text-lg">
+              Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. 
+              Libero commodo sagittis dignissim adipiscing quis.
+            </p>
+            <ul class="list-disc list-inside space-y-4 text-gray-600 text-lg">
+              <li>
+                Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. 
+                Lectus suspendisse nullam.
+              </li>
+              <li>
+                Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. 
+                Lectus suspendisse nullam.
+              </li>
+            </ul>
+            <button
+              class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition"
+            >
+              See More
+            </button>
+          </div>
+      
+          <!-- Video Content -->
+          <div class="box-two md:w-1/2">
+            <iframe
+              class="w-full h-64 md:h-80 rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/Cn4G2lZ_g2I?si=lqDnyRrj9m9VqoJM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="last-input bg-gray-100 py-12 px-6 md:px-20 flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
+        <!-- Newsletter Form -->
+        <div
+          class="newlatter bg-white border border-gray-300 p-8 rounded-lg shadow-lg md:w-1/2"
+        >
+          <h1 class="text-3xl font-bold text-gray-800 mb-4">Newsletter</h1>
+          <p class="text-gray-600 mb-6">
+            Get your daily dose of travel news & tips. <br />Sign up today!
+          </p>
+          <div class="input-box space-y-4">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+          </div>
+          <button
+            class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium mt-6 hover:bg-orange-600 transition"
+          >
+            Subscribe
+          </button>
+        </div>
+      
+        <!-- Image with Sticky Text -->
+        <div class="last-image relative md:w-1/2">
+          <img
+            src="./B9A2-Hero-Travel/Images/Rectangle 8 (1).png"
+            alt="Travel Discount"
+            class="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+          />
+          <!-- Sticky Offer Text -->
+          <div
+            class="save-up absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-white text-center space-y-2"
+          >
+            <p class="text-lg font-semibold">Travel.com</p>
+            <h1 class="text-5xl font-bold">Save up to 70%</h1>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="bg-gray-800 text-white py-12 px-6 md:px-20">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <!-- Logo and Description -->
+          <div class="mb-6 md:mb-0">
+            <h1 class="text-3xl font-bold flex items-center space-x-3">
+              <img
+                src="B9A2-Hero-Travel/Images/Group 40071 (2).png"
+                alt="Hero Travel"
+                class="w-12 h-12"
+              />
+              <span>Hero Travel</span>
+            </h1>
+            <p class="text-gray-400 mt-4 max-w-sm leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur. Nulla sit viverra morbi vitae
+              blandit orci potenti vulputate. Leo erat maecenas vitae elementum
+              ultricies nullam.
+            </p>
+          </div>
+      
+          <!-- Social Media Icons -->
+          <div class="flex space-x-6 mb-6 md:mb-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 transition text-2xl"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 transition text-2xl"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 transition text-2xl"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-orange-500 transition text-2xl"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      
+        <!-- Divider -->
+        <hr class="my-6 border-gray-700" />
+      
+        <!-- Footer Bottom -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>2017, All Rights Reserved.</p>
+          <p>
+            Designed by
+            <a
+              href="#"
+              class="text-orange-500 hover:text-orange-600 transition font-medium"
+              >Hero Travel</a
+            >
+          </p>
+        </div>
+      </footer>
+      
+  </body>
 </html>
